@@ -4,7 +4,6 @@ import Image2 from "../../assets/mypic8.png";
 export default function Navbar() {
   const handleClik = () => {
     document.querySelector(".sidebar").classList.toggle("away");
-    console.log(document.querySelector(".sidebar"));
   };
 
   useEffect(() => {
@@ -34,17 +33,39 @@ export default function Navbar() {
   const handleclick = (e, page) => {
     e.preventDefault;
     setActive(page);
+    setTimeout(() => {
+      document.querySelector('.sidebar').classList.add('away')
+      
+    }, 300);
   };
+
+const sidebarRef = useRef()
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+        // Close the sidebar here
+        console.log('Closing sidebar');
+        document.querySelector('.sidebar').classList.add('away')
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
   return (
-    <>
-      <div className="navbar" id="navbar" ref={refer}>
+    <div className="navbr" ref={refer}>
+      <div className="navbar" id="navbar" >
         <div className="header1">
           <div className="header">
-            <a href="#">
               <h3>
+            <a href="#">
                 AL<span>I</span> HU<span>S</span>NA<span>I</span>N
-              </h3>
             </a>
+              </h3>
             <i
               className="fa-solid fa-bars"
               id="fa-bars"
@@ -91,7 +112,7 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-      <div className="sidebar away" id="sidebar">
+      <div className="sidebar away" id="sidebar" ref={sidebarRef}>
         <div className="rel">
           <i className="fa-solid fa-xmark" onClick={handleClik}></i>
           <div className="img">
@@ -137,6 +158,6 @@ export default function Navbar() {
           </ul>
         </div>
       </div>
-    </>
+    </div>
   );
 }

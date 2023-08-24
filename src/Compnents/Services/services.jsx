@@ -22,7 +22,7 @@ export default function services() {
           I have no professional experience yet.
           I love React.js and My passion is to learn more and more about React.js.
           Becoming a full-stack developer is also one of my goals. I want to use React as a frontend and node.js for backend development
-          I can create responsice beautiful, functional websites that are easy for users to navigate through.
+          I can create responsice, beautiful, and functional websites that are easy for users to navigate through.
 
           <br />
           {" "}

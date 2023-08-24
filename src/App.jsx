@@ -10,7 +10,7 @@ import Footer from "./Compnents/footer/footer";
 function App() {
 
   return (
-    <div style={{backgroundColor:'#1e2125'}}>
+    <div >
       <Navbar />
       <Home />
       <Services />

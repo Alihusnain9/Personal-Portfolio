@@ -6,10 +6,12 @@
 #contact {
   background-color: var(--body-color);
   width: 100%;
+  /* overflow: hidden; */
 }
 
 .csection {
-  max-width: 1200px;
+  /* overflow: hidden; */
+  max-width: 1160px;
   margin: auto;
   padding: 1.5rem 1rem;
   border-top: 1px solid black;
@@ -211,4 +213,17 @@ span input {
   .csection h2 {
     font-size: 25px;
   }
+  .coninfo textarea{
+    width: 90%;
+  }
+
+  #mail{
+    width: 95%;
+  }
+
+  .coninfo input{
+    width: 98%;
+    padding-left: 0;
+  }
 }
+

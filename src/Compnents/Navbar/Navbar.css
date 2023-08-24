@@ -9,16 +9,22 @@
   font-family: "Poppins";
 }
 
-.navbar.active {
+.navbr.active {
   position: sticky;
   top: 0;
 }
 
-.navbar {
+.navbr{
   width: 100%;
+  background-color: #17191b;
+  z-index: 5;
+}
+
+.navbar {
   min-height: 50px;
   height: 9vh;
-  background-color: var(--body-color);
+  margin: auto;
+  max-width: 1160px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -40,17 +46,18 @@
 }
 
 .header h3 {
-  text-decoration: none;
+  flex: 1;
+  text-align: left;
+  margin-left: 2.5rem;
+}
+
+.header a:not(li a) {
   line-height: 100%;
   font-size: 30px;
   color: white;
   cursor: pointer;
   font-family: "Lato";
-  margin-left: 2.5rem;
-}
-
-.header a:not(li a) {
-  flex: 1;
+  width: fit-content;
   text-decoration: none;
 }
 
@@ -93,7 +100,7 @@ a.active {
 
 .sidebar {
   background-color: var(--body-color);
-  height: 100%;
+  height: 100vh;
   width: 200px;
   border-left: 2px solid var(--text-color);
   padding: 1rem;
@@ -105,16 +112,16 @@ a.active {
 }
 
 .sidebar .img {
-  margin-top: 2rem;
+  margin-top: 3rem;
   width: 100%;
-  height: 130px;
+  height: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .sidebar img {
-  height: 130px;
-  width: 130px;
+  height: 150px;
+  width: 150px;
   object-fit: contain;
   border-radius: 50%;
   margin: auto;
@@ -122,7 +129,7 @@ a.active {
 }
 
 .sidebar ul {
-  margin-top: 10px;
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
 }
@@ -155,7 +162,7 @@ a.active {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
   font-size: 25px;
   position: absolute;
-  top: -2.5rem;
+  top: -3rem;
   right: -10px;
   cursor: pointer;
 }
@@ -165,7 +172,7 @@ a.active {
   transition: all 1s linear;
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 565px) {
   .navbar {
     height: 50px;
   }
@@ -183,6 +190,9 @@ a.active {
     margin-right: 12px;
     cursor: pointer;
   }
+
+  
+
 }
 
 @media screen and (max-width: 700px) {
@@ -195,6 +205,9 @@ a.active {
 @media screen and (max-width: 600px) {
   .header h3 {
     margin-left: 1rem;
-    font-size: 27px;
+  }
+  
+  .header a:not(li a){
+    font-size: 25px;
   }
 }

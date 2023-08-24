@@ -4,24 +4,20 @@
 }
 #services {
   background-color: var(--body-color);
-  padding: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 1rem;
-  overflow: hidden;
+  width: 100%;
 }
 
 .head {
-  width: 100%;
+  margin: auto;
   border-top: 1px solid black;
-  max-width: 1200px;
+  max-width: 1160px;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  padding: 1rem;
 }
 
-.head h2:not(.item p) {
+.head h2 {
   font-size: 40px;
   font-weight: 600;
   text-align: center;
@@ -33,7 +29,9 @@
 .items {
   position: relative;
   height: 100%;
-  padding: 1rem 1.2rem;
+  padding: 1rem 0;
+  width: 90%;
+  margin: auto;
 
 }
 
@@ -80,9 +78,8 @@
   display: flex;
   flex-direction: column;
   justify-content: start;
-  margin: 0 10px;
   min-width: 300px;
-  max-width: 90%;
+  max-width: 95%;
   min-height: 350px;
   border: 1px solid white;
 }
@@ -182,7 +179,6 @@
 .custom-dots li {
   margin: 0 5px;
   display: inline-block;
-
   margin-top: 1rem;
 }
 
@@ -194,7 +190,7 @@
   border: none;
   cursor: pointer;
   text-decoration: none;
-  list-style: none;
+  overflow: hidden;
 }
 
 .custom-dots li.slick-active button {
