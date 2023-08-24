@@ -1,0 +1,187 @@
+:root {
+  --body-color: #1e2125;
+  --text-color: #ff014f;
+}
+
+#portfolio {
+  background-color: var(--body-color);
+  width: 100%;
+  padding-bottom: 1rem;
+}
+
+.Psection {
+  margin: auto;
+  max-width: 1200px;
+  border-top: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+.Psection h3 {
+  color: var(--text-color);
+  font-size: 20px;
+  margin-top: 1rem;
+}
+
+.Pitems {
+  padding: 0 1rem;
+  gap: 1rem;
+}
+.card {
+  background-color: #101113;
+  height: 100%;
+  gap: 1rem;
+  flex-direction: column;
+  min-width: 250px;
+  border-radius: 10px;
+  min-height: 450px;
+  width: 95% !important;
+  display: inline-block;
+  margin: auto;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px 10px 0px 0px;
+  cursor: pointer;
+}
+
+.cbody {
+  padding: 5px 8px;
+}
+
+.cbody h5 {
+  color: white;
+  font-family: "Roboto";
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.cbody p {
+  margin-top: 5px;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  overflow-y: scroll;
+  height: 118px;
+}
+
+.cbody p::-webkit-scrollbar {
+  display: none;
+}
+
+.cbody div {
+  gap: 1rem;
+  display: flex;
+  margin-top: 1rem;
+}
+
+.cbody button {
+  font-size: 18px;
+  padding: 5px 10px;
+  background-color: var(--text-color);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.cbody button i {
+  font-size: 16px;
+}
+
+.cbody .icon {
+  font-size: 19px;
+}
+
+.Psection h2 {
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 10px;
+  color: white;
+}
+
+@media screen and (max-width: 550px) {
+  .Pitems {
+    padding: 0 2rem;
+  }
+
+  .Psection h2 {
+    font-size: 33px;
+    margin-bottom: 7px;
+  }
+
+  .Psection h3 {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .Pitems {
+    padding: 0 0.5rem;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .Pitems {
+    padding: 0;
+  }
+
+  .Psection {
+    padding: 0.7rem;
+  }
+
+  .Psection h2 {
+    font-size: 25px;
+    /* margin-bottom: 5px; */
+  }
+
+  .Psection h3 {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .Psection h2 {
+    font-size: 25px;
+    /* margin-bottom: 5px; */
+  }
+
+  .Psection h3 {
+    font-size: 17px;
+  }
+}
+
+.custom-dots {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.custom-dots li {
+  margin: 0 5px;
+  display: inline-flex;
+  margin-top: 1rem;
+
+  list-style: none;
+}
+
+.custom-dots li button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.custom-dots li.slick-active button {
+  background-color: red;
+}

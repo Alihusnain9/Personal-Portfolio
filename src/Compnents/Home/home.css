@@ -1,0 +1,274 @@
+:root {
+  --body-color: #1e2125;
+  --text-color: #ff014f;
+}
+
+#home {
+  width: 100%;
+  background-color: var(--body-color);
+  padding: 8vh 0 5vh 0;
+}
+
+.section {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  height: 100%;
+  max-width: 1200px;
+}
+
+.text {
+  margin-top: 100px;
+}
+
+.btn {
+  font-size: 16px;
+  border: 1px solid var(--text-color);
+  color: var(--text-color);
+  background-color: transparent;
+  padding: 8px 20px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background-color: var(--text-color);
+  color: white;
+}
+
+.text h1,
+h1 span {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 43px;
+}
+
+.text p {
+  margin-top: 8px;
+  margin-right: 10px;
+}
+
+h1 span {
+  color: var(--text-color);
+}
+
+.text h2 {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 37px;
+}
+
+p {
+  color: rgb(215, 212, 212);
+  font-size: 16px;
+  font-weight: 400;
+}
+p span {
+  color: var(--text-color);
+}
+
+.image {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+}
+
+.image img {
+  height: 500px;
+  background-color: transparent;
+  box-shadow: 0 2px 20px var(--text-color);
+  /* width: 300px; */
+  object-fit:cover;
+  width: 100%;
+
+}
+
+.text .icons {
+  margin-top: 8rem;
+}
+
+.text .icons svg {
+  cursor: pointer;
+  margin-right: 2rem;
+  box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease-out;
+  background-color: transparent;
+  padding: 0.5rem;
+  fill: rgb(169, 164, 164);
+  height: 35px;
+  width: 35px;
+}
+
+.text .icons svg:hover {
+  transform: translateY(-2px);
+}
+
+/* //////////////////////     MEDIA QUIRIES      ////////////////////// */
+
+@media screen and (max-width: 840px) {
+  .text {
+    margin-top: 55px;
+  }
+
+  .btn {
+    font-size: 16px;
+    padding: 6px 15px;
+  }
+
+  .text h1,
+  h1 span {
+    color: white;
+    font-size: 33px;
+  }
+
+  h1 span {
+    color: var(--text-color);
+  }
+
+  .text h2 {
+    font-size: 27px;
+  }
+
+  .image {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    height: 300px;
+  }
+
+  .image img {
+    height: 100%;
+    width: 180px;
+    object-fit: contain;
+  }
+
+  .text .icons {
+    margin-top: 4rem;
+  }
+
+  .text .icons svg {
+    margin-right: 1.5rem;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.5);
+    padding: 0.4rem;
+    height: 27px;
+    width: 27px;
+    color: white;
+    fill: #ff014f;
+  }
+
+  .text .icons svg:hover {
+    transform: translateY(-2px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .text {
+    margin-top: 45px;
+  }
+
+  .btn {
+    font-size: 16px;
+    padding: 5px 10px;
+  }
+
+  .text h1,
+  h1 span {
+    color: white;
+    font-size: 27px;
+  }
+  .text p {
+    font-size: 15px;
+  }
+
+  h1 span {
+    color: var(--text-color);
+  }
+
+  .text h2 {
+    font-size: 21px;
+  }
+
+  .image {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    height: 280px;
+  }
+
+  .image img {
+    height: 100%;
+  }
+
+  .text .icons {
+    margin-top: 3rem;
+  }
+
+  .text .icons svg {
+    margin-right: 1rem;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    padding: 0.35rem;
+    height: 27px;
+    width: 27px;
+  }
+
+  .text .icons svg:hover {
+    transform: translateY(-2px);
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .image {
+    display: none;
+  }
+
+  .text {
+    margin-left: 2rem;
+    margin-top: 1rem;
+  }
+
+  .text .icons {
+    margin-top: 1.5rem;
+  }
+
+  .btn {
+    font-size: 16px;
+    padding: 4px 7px;
+  }
+
+  #home {
+    padding: 5vh 0;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .text {
+    margin-left: 0.3rem;
+  }
+
+  .text h1,
+  h1 span {
+    color: white;
+    font-size: 23px;
+  }
+
+  .text p {
+    font-size: 13px;
+  }
+
+  h1 span {
+    color: var(--text-color);
+  }
+
+  .text h2 {
+    font-size: 18px;
+  }
+
+  .btn {
+    font-size: 16px;
+    padding: 3px 5px;
+    letter-spacing: 0;
+    font-weight: 500;
+  }
+}

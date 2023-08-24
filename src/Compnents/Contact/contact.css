@@ -1,0 +1,214 @@
+:root {
+  --body-color: #1e2125;
+  --text-color: #ff014f;
+}
+
+#contact {
+  background-color: var(--body-color);
+  width: 100%;
+}
+
+.csection {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1.5rem 1rem;
+  border-top: 1px solid black;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(1fr, 1fr));
+}
+
+.csection h5 {
+  color: var(--text-color);
+  font-size: 20px;
+}
+
+.csection h2 {
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.sec-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.coninfo {
+  width: 100%;
+
+  margin: auto;
+  padding: 1.5rem;
+  background-color: var(--body-color);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
+
+.coninfo input {
+  background-color: #15171b;
+  border: 2px solid transparent;
+  outline: none;
+  font-size: 16px;
+  color: white;
+  padding: 8px 5px;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  border-bottom: 2px solid rgb(81, 80, 80);
+}
+
+.span {
+  display: none;
+}
+
+.coninfo input:invalid ~ .span {
+  display: block;
+}
+
+.area span {
+  display: none;
+  color: red;
+}
+
+#area:invalid ~ .area span {
+  display: block;
+}
+
+.coninfo input:focus {
+  border: 2px solid var(--text-color);
+}
+
+.coninfo label {
+  color: rgb(206, 204, 204);
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.coninfo div {
+  margin-top: 1rem;
+}
+
+span input {
+  width: 100%;
+}
+
+.name {
+  display: flex;
+  gap: 2rem;
+  padding-right: 10px;
+  width: 100%;
+}
+
+.name span {
+  width: 48%;
+}
+
+.coninfo .mail {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.coninfo .area {
+  display: flex;
+  flex-direction: column;
+}
+
+.coninfo #area {
+  background-color: #15171b;
+  resize: none;
+  border: 2px solid transparent;
+  outline: none;
+  color: white;
+  font-size: 15px;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  padding: 7px 10px;
+  border-bottom: 2px solid rgb(81, 80, 80);
+}
+
+.coninfo #area:focus {
+  border: 2px solid var(--text-color);
+}
+
+.butn {
+  width: 100%;
+  background-color: #15171b;
+  color: white;
+  padding: 12px 0;
+  outline: none;
+  margin: 1rem 0;
+  border: none;
+  cursor: pointer;
+  font-size: 17px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease-out;
+}
+
+.butn:hover {
+  transform: translateY(-4px);
+}
+
+@media screen and (max-width: 560px) {
+  .name {
+    flex-direction: column;
+  }
+  .csection h5 {
+    font-size: 18px;
+  }
+
+  .csection h2 {
+    font-size: 33px;
+    margin-bottom: 6px;
+  }
+
+  .coninfo label {
+    font-weight: 600;
+    font-size: 13px;
+    margin-bottom: 0;
+  }
+
+  .coninfo input {
+    font-weight: 600;
+    font-size: 13px;
+  }
+
+  .name {
+    gap: 0.5rem;
+  }
+
+  .coninfo #area {
+    font-weight: 600;
+    font-size: 13px;
+  }
+
+  .area label {
+    font-weight: 600;
+    font-size: 13px;
+    margin-bottom: 0;
+  }
+
+  .coninfo {
+    padding: 0.5rem;
+  }
+
+  .name span {
+    width: 97%;
+  }
+}
+
+@media screen and (max-width: 260px) {
+  .csection {
+    padding: 1.5rem 0.3rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .csection h5 {
+    font-size: 17px;
+  }
+
+  .csection h2 {
+    font-size: 25px;
+  }
+}
